@@ -111,7 +111,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000000394f216d312aa70076211536749072011d837182ddda2bbf05b3e59c"));
         assert(genesis.hashMerkleRoot == uint256S("0x12cf3d84068ad4a51559193070822caef1544b6a434442e5bc7737ec46c60eb3"));
 
-        vSeeds.push_back(CDNSSeedData("78.47.157.59", "78.47.157.59")); // our server
+        vSeeds.push_back(CDNSSeedData("93.174.91.51", "93.174.91.51")); // our server
 	/*
         vSeeds.push_back(CDNSSeedData("electrum.sipa.be", "seed.electrum.sipa.be")); // Pieter Wuille
         vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me")); // Matt Corallo
