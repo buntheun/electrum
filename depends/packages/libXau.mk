@@ -1,11 +1,12 @@
-package=freetype
-$(package)_version=2.7.1
-$(package)_download_path=http://download.savannah.gnu.org/releases/$(package)
+package=libXau
+$(package)_version=1.0.8
+$(package)_download_path=http://xorg.freedesktop.org/releases/individual/lib/
 $(package)_file_name=$(package)-$($(package)_version).tar.bz2
-$(package)_sha256_hash=3a3bb2c4e15ffb433f2032f50a5b5a92558206822e22bfe8cbe339af4aa82f88
+$(package)_sha256_hash=fdd477320aeb5cdd67272838722d6b7d544887dfe7de46e1e7cc0c27c2bea4f2
+$(package)_dependencies=xproto
 
 define $(package)_set_vars
-  $(package)_config_opts=--without-zlib --without-png --disable-static
+  $(package)_config_opts=--disable-shared
   $(package)_config_opts_linux=--with-pic
 endef
 
