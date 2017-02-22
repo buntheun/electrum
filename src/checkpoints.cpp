@@ -27,7 +27,7 @@ namespace Checkpoints {
 
     //! Guess how far we are in the verification process at the given block index
     double GuessVerificationProgress(const CCheckpointData& data, CBlockIndex *pindex, bool fSigchecks) {
-	    return 1.0 ; 
+	    return 1.0 ; //++ Checkpoint disabled (1/3)
 	    /*
         if (pindex==NULL)
             return 0.0;
@@ -60,7 +60,7 @@ namespace Checkpoints {
 
     int GetTotalBlocksEstimate(const CCheckpointData& data)
     {
-	    return 0;
+	    return 0; //++ Checkpoint disabled (2/3)
 	    /*
         const MapCheckpoints& checkpoints = data.mapCheckpoints;
 
@@ -73,7 +73,7 @@ namespace Checkpoints {
 
     CBlockIndex* GetLastCheckpoint(const CCheckpointData& data)
     {
-	    return NULL;
+	    return NULL; //++ Checkpoints Disabled (3/3)
 	    /*
         const MapCheckpoints& checkpoints = data.mapCheckpoints;
 

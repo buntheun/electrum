@@ -102,21 +102,21 @@ public:
         pchMessageStart[2] = 0xb4;
         pchMessageStart[3] = 0xd9;
         vAlertPubKey = ParseHex("04fc9702847840aaf195de8442ebecedf5b095cdbb9bc716bda9110971b28a49e0ead8564ff0db22209e0374782c093bb899692d524e9d6a6956e7c5ecbcd68284");
-        nDefaultPort = 14689;
+        nDefaultPort = 14689; //++ Default port changed
         nMaxTipAge = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1486738256, 1082952170, 0x1d00ffff, 1, 1000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000000394f216d312aa70076211536749072011d837182ddda2bbf05b3e59c"));
-        assert(genesis.hashMerkleRoot == uint256S("0x12cf3d84068ad4a51559193070822caef1544b6a434442e5bc7737ec46c60eb3"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000000394f216d312aa70076211536749072011d837182ddda2bbf05b3e59c")); //++Changing Genesis block hash
+        assert(genesis.hashMerkleRoot == uint256S("0x12cf3d84068ad4a51559193070822caef1544b6a434442e5bc7737ec46c60eb3")); //++Changing Merkle root hash
 
-        vSeeds.push_back(CDNSSeedData("93.174.91.51", "93.174.91.51")); // our server
+        vSeeds.push_back(CDNSSeedData("93.174.91.51", "93.174.91.51")); //++ Seed server ip
 	/*
         vSeeds.push_back(CDNSSeedData("electrum.sipa.be", "seed.electrum.sipa.be")); // Pieter Wuille
         vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me")); // Matt Corallo
         vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.electrum.dashjr.org")); // Luke Dashjr
-        vSeeds.push_back(CDNSSeedData("electrumstats.com", "seed.electrumstats.com")); // Christian Decker
+        vSeeds.push_back(CDNSSeedData("electrumstats.com", "seed.electrumstats.com")); // Christian Deckerd server
         vSeeds.push_back(CDNSSeedData("xf2.org", "bitseed.xf2.org")); // Jeff Garzik
         vSeeds.push_back(CDNSSeedData("electrum.jonasschnelli.ch", "seed.electrum.jonasschnelli.ch")); // Jonas Schnelli
 */
