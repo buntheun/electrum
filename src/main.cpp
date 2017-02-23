@@ -3,6 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+//++ Changed all "bitcoin"s to "electrum" in files and file names
+
 #include "main.h"
 
 #include "addrman.h"
