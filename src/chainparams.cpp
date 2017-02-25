@@ -51,7 +51,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "electrum genesis block";
-    const CScript genesisOutputScript = CScript() << OP_DUP << OP_HASH160 <<  ParseHex("7b56a455034952443c6cb259081aaabf3e1d1747") << OP_EQUALVERIFY << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << OP_DUP << OP_HASH160 <<  
+	    ParseHex("7b56a455034952443c6cb259081aaabf3e1d1747") << OP_EQUALVERIFY << OP_CHECKSIG; //++Changing genesis block output script
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -106,7 +107,7 @@ public:
         nMaxTipAge = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1486738256, 1082952170, 0x1d00ffff, 1, 1000 * COIN);
+        genesis = CreateGenesisBlock(1486738256, 1082952170, 0x1d00ffff, 1, 1000 * COIN); //++Changing genesis block parameters
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000000394f216d312aa70076211536749072011d837182ddda2bbf05b3e59c")); //++Changing Genesis block hash
         assert(genesis.hashMerkleRoot == uint256S("0x12cf3d84068ad4a51559193070822caef1544b6a434442e5bc7737ec46c60eb3")); //++Changing Merkle root hash
